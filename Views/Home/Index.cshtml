@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model Lizard
+
+
+<form asp-action="Process"class="col-5"method="post">
+    <h1>Add a Lizard Pirate: </h1>
+    <div class="form-group">
+        <label asp-for="Name">Name: </label>
+        <input asp-for="Name" class="form-control">
+        <span class="text-danger" asp-validation-for="Name"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="LizardType">Lizard Type: </label>
+        <input asp-for="LizardType" class="form-control">
+        <span class="text-danger" asp-validation-for="LizardType"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="PirateRole">Pirate Role: </label>
+        <input asp-for="PirateRole" class="form-control">
+        <span class="text-danger" asp-validation-for="PirateRole"></span>
+    </div>
+    <input type="submit" class="btn btn-warning btn-outline-dark">
+</form>
+

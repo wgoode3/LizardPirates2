@@ -1,0 +1,29 @@
+@{
+    ViewData["Title"] = "Here be Pirates";
+}
+@model List<Lizard>
+
+<h1>Here Be ARRRRR Pirates</h1>
+
+<table class="table-striped table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Lizard Type</th>
+            <th>Pirate Role</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(Lizard l in Model)
+        {
+            <tr>
+                <td>
+                    <a href="/pirate/@l.LizardId">@l.Name</a>
+                </td>
+                <td>@l.LizardType</td>
+                <td>@l.PirateRole</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a asp-action="Index" asp-controller="Home" class="btn btn-primary">Home</a>
